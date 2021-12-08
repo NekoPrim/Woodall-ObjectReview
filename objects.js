@@ -37,6 +37,7 @@ function checkPenguins(array) {
     for (let i = 0; i < penguins.length; i ++) {
         if (array[i].isCute) {
             cutePenguins.push(array[i].name);
+        }
     }
     return cutePenguins;
 }
@@ -62,7 +63,7 @@ function Hat(type, color, size) {
     this.type = type,
     this.color = color,
     this.size = size
-};
+}
 
 const averageTopHat = new Hat('top', 'black', 14);
 const fedoraHat = new Hat('fedora', 'off-charcoal', 10);
@@ -70,11 +71,14 @@ const funnyHat = new Hat('funny', 'rainbow', 18);
 
 console.log(`our fedora is size ${fedoraHat.size}`);
 
+console.log(`our funny hat color is ${funnyHat.size}`);
+
+
 function printHat(hatInput) {
     console.log('hat type is:', hatInput.type);
     console.log('hat color is:', hatInput.color);
-};
+}
 
 printHat({type: 'baseball', color: 'blue', size: 12});
 
-printHat(fedora);
+printHat(fedoraHat);
